@@ -1,0 +1,184 @@
+{
+  "users": [
+    {
+      "first_name": "Sofía",
+      "last_name": "Reyes",
+      "email": "sofia.reyes@example.com",
+      "password": "894563",
+      "birthday": "1998-03-18T00:00:00.000Z",
+      "image_url": "https://avatar.iran.liara.run/public/girl?username=SofiaReyes",
+      "id": "3765"
+    },
+    {
+      "id": "9bbb",
+      "first_name": "Mateo",
+      "last_name": "Diaz",
+      "email": "mateo.diaz@example.com",
+      "password": "129874",
+      "birthday": "2000-06-12T00:00:00.000Z",
+      "image_url": "https://avatar.iran.liara.run/public/boy?username=MateoDiaz"
+    },
+    {
+      "id": "eced",
+      "first_name": "Valentina",
+      "last_name": "Torres",
+      "email": "valentina.torres@example.com",
+      "password": "456783",
+      "birthday": "1995-04-11T00:00:00.000Z",
+      "image_url": "https://avatar.iran.liara.run/public/girl?username=ValentinaTorres"
+    },
+    {
+      "id": "446f",
+      "first_name": "Luis",
+      "last_name": "Carrillo",
+      "email": "luis.carrrillo@example.com",
+      "password": "982374",
+      "birthday": "1999-07-18T00:00:00.000Z",
+      "image_url": "https://avatar.iran.liara.run/public/boy?username=LuisCarrillo"
+    },
+    {
+      "id": "a3fc",
+      "first_name": "Isabella",
+      "last_name": "Mendoza",
+      "email": "isabella.mendoza@example.com",
+      "password": "875412",
+      "birthday": "2001-02-26T00:00:00.000Z",
+      "image_url": "https://avatar.iran.liara.run/public/girl?username=IsabellaMendoza"
+    },
+    {
+      "first_name": "Sebastián",
+      "last_name": "Vargas",
+      "email": "sebastian.vargas@example.com",
+      "password": "563821",
+      "birthday": "1996-12-09T00:00:00.000Z",
+      "image_url": "https://avatar.iran.liara.run/public/boy?username=SebastianVargas",
+      "id": "527a"
+    },
+    {
+      "id": "9989",
+      "first_name": "Camila",
+      "last_name": "Ramírez",
+      "email": "camila.ramirez@example.com",
+      "password": "789632",
+      "birthday": "1997-08-14T00:00:00.000Z",
+      "image_url": "https://avatar.iran.liara.run/public/girl?username=CamilaRamirez"
+    },
+    {
+      "id": "2997",
+      "first_name": "Andrés",
+      "last_name": "López",
+      "email": "andres.lopez@example.com",
+      "password": "145698",
+      "birthday": "1995-01-30T00:00:00.000Z",
+      "image_url": "https://avatar.iran.liara.run/public/boy?username=AndresLopez"
+    },
+    {
+      "id": "1ebe",
+      "first_name": "Renata",
+      "last_name": "Jiménez",
+      "email": "renata.jimenez@example.com",
+      "password": "563214",
+      "birthday": "2002-04-21T00:00:00.000Z",
+      "image_url": "https://avatar.iran.liara.run/public/girl?username=RenataJimenez"
+    },
+    {
+      "id": "267d",
+      "first_name": "Paola",
+      "last_name": "Navarro",
+      "email": "paola.navarro@example.com",
+      "password": "932184",
+      "birthday": "1996-05-17T00:00:00.000Z",
+      "image_url": "https://avatar.iran.liara.run/public/girl?username=PaolaNavarro"
+    },
+    {
+      "id": "2396",
+      "first_name": "Jorge",
+      "last_name": "Silva",
+      "email": "jorge.silva@example.com",
+      "password": "120345",
+      "birthday": "1994-10-08T00:00:00.000Z",
+      "image_url": "https://avatar.iran.liara.run/public/boy?username=JorgeSilva"
+    },
+    {
+      "id": "0d22",
+      "first_name": "Fernanda",
+      "last_name": "González",
+      "email": "fernanda.gonzalez@example.com",
+      "password": "871264",
+      "birthday": "1997-12-23T00:00:00.000Z",
+      "image_url": "https://avatar.iran.liara.run/public/girl?username=FernandaGonzalez"
+    },
+    {
+      "id": "cd64",
+      "first_name": "Carlos",
+      "last_name": "Ríos",
+      "email": "carlos.rios@example.com",
+      "password": "345981",
+      "birthday": "1993-03-01T00:00:00.000Z",
+      "image_url": "https://avatar.iran.liara.run/public/boy?username=CarlosRios"
+    },
+    {
+      "id": "43ed",
+      "first_name": "Andrea",
+      "last_name": "Castro",
+      "email": "andrea.castro@example.com",
+      "password": "786320",
+      "birthday": "2000-06-15T00:00:00.000Z",
+      "image_url": "https://avatar.iran.liara.run/public/girl?username=AndreaCastro"
+    },
+    {
+      "id": "7294",
+      "first_name": "Mario",
+      "last_name": "Paredes",
+      "email": "mario.paredes@gmail.com",
+      "password": "123789",
+      "birthday": "1995-08-29T00:00:00.000Z",
+      "image_url": "https://avatar.iran.liara.run/public/boy?username=MarioParedes"
+    },
+    {
+      "id": "0e3d",
+      "first_name": "Ana",
+      "last_name": "Ruíz",
+      "email": "ana.ruiz@example.com",
+      "password": "489213",
+      "birthday": "1999-02-06T00:00:00.000Z",
+      "image_url": "https://avatar.iran.liara.run/public/girl?username=AnaRuiz"
+    },
+    {
+      "id": "ebc5",
+      "first_name": "Gabriel",
+      "last_name": "Montes",
+      "email": "gabriela.montes@example.com",
+      "password": "620148",
+      "birthday": "1998-10-19T00:00:00.000Z",
+      "image_url": "https://avatar.iran.liara.run/public/boy?username=GabrielMontes"
+    },
+    {
+      "id": "45a6",
+      "first_name": "Daniela",
+      "last_name": "Sánchez",
+      "email": "daniela.sanchez@example.com",
+      "password": "935471",
+      "birthday": "2001-07-03T00:00:00.000Z",
+      "image_url": "https://avatar.iran.liara.run/public/girl?username=DanielaSanchez"
+    },
+    {
+      "first_name": "Tomás",
+      "last_name": "Peña",
+      "email": "tomas.pena@example.com",
+      "password": "749820",
+      "birthday": "1994-03-12T00:00:00.000Z",
+      "image_url": "https://avatar.iran.liara.run/public/boy?username=TomasPena",
+      "id": "cd42"
+    },
+    {
+      "id": "918c",
+      "first_name": "El Isra",
+      "last_name": "bb",
+      "email": "caguabonga@lococo.com",
+      "password": "331819",
+      "birthday": "1999-12-12T00:00:00.000Z",
+      "image_url": "https://avatar.iran.liara.run/public/boy?username=elisra"
+    }
+  ]
+}
