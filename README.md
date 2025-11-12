@@ -6,6 +6,8 @@ Se integran múltiples hooks personalizados, validaciones con Zod, formularios r
 ## 🚀Demo en línea  
 **🔗Disponible solo en servidor local**
 
+**🔗https://usercrud-fullstack.netlify.app/**
+
 ## 🎯 Objetivo del proyecto
 
 Construir una aplicación web funcional e interactiva en React usando Vite.js, que permita al usuario:
