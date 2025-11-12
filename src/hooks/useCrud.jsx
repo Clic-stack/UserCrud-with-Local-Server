@@ -16,7 +16,8 @@ export function useCrud(url) {
       const results = Array.isArray(res.data) ? res.data : []
       setData(results)
     } catch (error) {
-      const errorMessage = error.response?.data?.message || "Whoops! Looks like we're having a temporary hiccup with the server. Please try again later."
+      const errorMessage = error.response?.data?.message || 
+        "Whoops! Looks like we're having a temporary hiccup with the server. Please try again later."
       setError(errorMessage)
       console.error('[Error GetAll]: ', error.message)
     } finally {
@@ -27,10 +28,11 @@ export function useCrud(url) {
   const create = useCallback(async (item) => {
     try {
       const res = await api.current.post('/', item)
-      const newItem = res.data
+      const newItem = res.data.user   
       setData((prev) => Array.isArray(prev) ? [...prev, newItem] : [newItem])
     } catch (error) {
-      const errorMessage = error.response?.data?.message || 'Oops! Something went wrong while saving your data. Please try again later.'
+      const errorMessage = error.response?.data?.message || 
+        'Oops! Something went wrong while saving your data. Please try again later.'
       setError(errorMessage)
       console.error('[Error Create]: ', error.message)
     }
@@ -39,12 +41,13 @@ export function useCrud(url) {
   const update = useCallback(async (id, item) => {
     try {
       const res = await api.current.put(`/${id}`, item)
-      const itemEdited = res.data
-      setData((prev) => prev.map((item) => (
-        item.id === id ? itemEdited : item
+      const itemEdited = res.data.user   
+      setData((prev) => prev.map((u) => (
+        u.id === id ? itemEdited : u
       )))
     } catch (error) {
-      const errorMessage = error.response?.data?.message || 'We couldn’t update your information. Please try again later.'
+      const errorMessage = error.response?.data?.message || 
+        'We couldn’t update your information. Please try again later.'
       setError(errorMessage)
       console.error('[Error Update]: ', error.message)
     }
@@ -55,7 +58,8 @@ export function useCrud(url) {
       await api.current.delete(`/${id}`)
       setData((prev) => prev.filter((item) => item.id !== id))
     } catch (error) {
-      const errorMessage = error.response?.data?.message || 'Sorry but, We couldn’t delete your information. Please try again later.'
+      const errorMessage = error.response?.data?.message || 
+        'Sorry but, We couldn’t delete your information. Please try again later.'
       setError(errorMessage)
       console.error('[Error Delete]: ', error.message)
     }

@@ -9,15 +9,14 @@ import LoadingScreen from "./components/LoadingScreen"
 import usePagination from "./hooks/usePagination"
 import Pagination from "./components/Pagination"
 
-
-const baseUrl = 'http://localhost:4000/users'
+const baseUrl = import.meta.env.VITE_API_URL
 
 function App() {
   const [
     users,
     loading, 
     error, 
-    {getAll, create, update, remove}
+    { getAll, create, update, remove }
   ] = useCrud(baseUrl)
 
   const {
@@ -29,33 +28,30 @@ function App() {
     setPage
   } = usePagination({ itemsPerPage: 6, items: users })
 
-
-  const {isOpen, openModal, closeModal, modalContent, setModalContent} = useModal()
+  const { isOpen, openModal, closeModal, modalContent, setModalContent } = useModal()
 
   const [selectedUser, setSelectedUser] = useState(null)
 
   useEffect(() => {
     getAll()
-  }, [])
+  }, [getAll])
 
-  const handleCreate = (dataForm) => {
-    create(dataForm)
+  const handleCreate = async (dataForm) => {
+    await create(dataForm)  
     closeModal()
   }
 
   const handleAdd = () => {
     openModal()
     setModalContent(
-      <Form 
-        onSubmit={handleCreate}
-        />
+      <Form onSubmit={handleCreate} />
     )
   }
   
-  const handleDelete = (user) => {
+  const handleDelete = async (user) => {
     const confirmDelete = window.confirm(`Are you sure to want to delete ${user.first_name} ${user.last_name}?`)
     if (confirmDelete) {
-      remove(user.id)
+      await remove(user.id)   
     }
   }
 
@@ -64,8 +60,8 @@ function App() {
     closeModal()
   }
 
-  const handleUpdate = (dataForm) => {
-    update(dataForm.id, dataForm)
+  const handleUpdate = async (dataForm) => {
+    await update(dataForm.id, dataForm)   
     setSelectedUser(null)
     closeModal()
   }
@@ -78,7 +74,7 @@ function App() {
         onSubmit={handleUpdate}
         onCancel={handleCancel}
         user={user}
-        />
+      />
     )
   }
 
@@ -92,31 +88,31 @@ function App() {
       </div>
 
       {loading ? (
-          <LoadingScreen />
-        ) : error ? (
-            <p className="errors">{error}</p>
-          ) : users.length > 0 ? (
-              <>
-                <UserContent
-                  users={pageItems} 
-                  onEdit={handleEdit}
-                  onDelete={handleDelete}
-                 />
-                <Pagination 
-                  page={page}
-                  totalPages={totalPages}
-                  onPrev={onPrev}
-                  onNext={onNext}
-                  setPage={setPage}
-                 />
-              </>
-            ) : (
-              <p className="message">Ready to add your first user? Please give the first click!</p>
-            )}
+        <LoadingScreen />
+      ) : error ? (
+        <p className="errors">{error}</p>
+      ) : users.length > 0 ? (
+        <>
+          <UserContent
+            users={pageItems} 
+            onEdit={handleEdit}
+            onDelete={handleDelete}
+          />
+          <Pagination 
+            page={page}
+            totalPages={totalPages}
+            onPrev={onPrev}
+            onNext={onNext}
+            setPage={setPage}
+          />
+        </>
+      ) : (
+        <p className="message">Ready to add your first user? Please give the first click!</p>
+      )}
 
-            <Modal openModal={isOpen} closeModal={closeModal}>
-              {modalContent}
-            </Modal>
+      <Modal openModal={isOpen} closeModal={closeModal}>
+        {modalContent}
+      </Modal>
     </div>
   )
 }
